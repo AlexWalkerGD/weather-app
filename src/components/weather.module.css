@@ -38,11 +38,16 @@ body {
   height: 100%;
   width: 40px;
   border: none;
+  outline: none;
   border-radius: 0 50px 50px 0;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.searchbar button:hover {
+  background-color: rgba(150, 148, 148, 0.61);
 }
 
 .weather {
@@ -61,7 +66,7 @@ body {
   display: flex;
   flex-direction: row;
   padding-top: 30px;
-  gap: 30px;
+  gap: 40px;
   font-size: small;
 }
 

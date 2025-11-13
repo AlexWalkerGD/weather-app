@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./weather.module.css";
 import { FaSearch } from "react-icons/fa";
 
 const Weather = () => {
+  const inputRef = useRef();
   const [WeatherData, setWeatherData] = useState(false);
 
   const search = async (city) => {
@@ -32,8 +33,8 @@ const Weather = () => {
   return (
     <div className={styles.container}>
       <div className={styles.searchbar}>
-        <input type="text" placeholder="Search" />
-        <button>
+        <input ref={inputRef} type="text" placeholder="Search" />
+        <button onClick={() => search(inputRef.current.value)}>
           <FaSearch />
         </button>
       </div>
