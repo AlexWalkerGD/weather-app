@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import styles from "./weather.module.css";
+import { FaSearch } from "react-icons/fa";
 
 const Weather = () => {
   const [WeatherData, setWeatherData] = useState(false);
@@ -10,12 +12,13 @@ const Weather = () => {
       }`;
       const response = await fetch(url);
       const data = await response.json();
+      console.log(data);
       setWeatherData({
         humidity: data.main.humidity,
         windSpeed: data.wind.speed,
         temperature: Math.floor(data.main.temp),
         location: data.name,
-        icon: data.weather.icon,
+        icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
       });
     } catch (error) {
       console.error(error);
@@ -23,27 +26,38 @@ const Weather = () => {
   };
 
   useEffect(() => {
-    search("London");
+    search("Lisbon");
   }, []);
 
   return (
-    <div className="container">
-      <div className="search-bar">
+    <div className={styles.container}>
+      <div className={styles.searchbar}>
         <input type="text" placeholder="Search" />
+        <button>
+          <FaSearch />
+        </button>
       </div>
-      <img src={WeatherData.icon} alt="" />
-      <p>{WeatherData.temperature}°c</p>
-      <p>{WeatherData.location}</p>
-      <div>
-        <div>
-          <p>{WeatherData.humidity} %</p>
-          <span>Humidity</span>
+      <img
+        src={WeatherData.icon}
+        alt={WeatherData.location}
+        className={styles.weather}
+      />
+      <p className={styles.temperature}>{WeatherData.temperature}°c</p>
+      <p className={styles.location}>{WeatherData.location}</p>
+      <div className={styles.othersdata}>
+        <div className={styles.details}>
+          <img src="/humidity.png" alt="" />
+          <div>
+            <p>{WeatherData.humidity} %</p>
+            <span>Humidity</span>
+          </div>
         </div>
-      </div>
-      <div>
-        <div>
-          <p>{WeatherData.windSpeed} Km/h</p>
-          <span>Wind Speed</span>
+        <div className={styles.details}>
+          <img src="/wind.png" alt="" />
+          <div>
+            <p>{WeatherData.windSpeed} Km/h</p>
+            <span>Wind Speed</span>
+          </div>
         </div>
       </div>
     </div>

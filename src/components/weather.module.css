@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: Poppins;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.searchbar {
+  height: 35px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchbar input {
+  height: 100%;
+  width: 210px;
+  border: none;
+  outline: none;
+  border-radius: 50px 0 0 50px;
+  padding-left: 15px;
+}
+
+.searchbar button {
+  height: 100%;
+  width: 40px;
+  border: none;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather {
+  height: 150px;
+}
+
+.temperature {
+  font-size: 50px;
+}
+
+.location {
+  font-size: 30px;
+}
+
+.othersdata {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+  gap: 30px;
+  font-size: small;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.details img {
+  height: 22px;
+}
