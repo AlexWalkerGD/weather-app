@@ -1,16 +1,81 @@
-# React + Vite
+# ⛅ WeatherNow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Tech](https://img.shields.io/badge/tech-JavaScript-informational)
 
-Currently, two official plugins are available:
+## 📖 About the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**WeatherNow** is a simple and fast weather application that allows users to search for any city and instantly view the current weather information.  
+The project consumes the **OpenWeatherMap API** to display real-time data such as temperature, humidity, wind speed, and general city conditions.
 
-## React Compiler
+🔗 **Access the live project:** [Click here](https://alexwalkergd.github.io/weather-app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🖼️ Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<img width="311" height="500" alt="image" src="https://github.com/user-attachments/assets/9831b189-0911-4dd9-8853-5fae27292dac" />
+
+
+<img width="311" height="488" alt="image" src="https://github.com/user-attachments/assets/870325f2-a16e-4c6e-9571-233483b3d2f4" />
+
+---
+
+## 🚀 Features
+
+- 🔍 Search any city in the world  
+- 🌡️ Display current temperature  
+- 💧 Show humidity levels  
+- 🌬️ Show wind speed  
+- ⚡ Clean, responsive and lightweight interface  
+
+---
+
+## 🛠️ Technologies Used
+
+- HTML5  
+- CSS3  
+- JavaScript  
+- OpenWeatherMap API  
+
+---
+
+## ⚙️ How to Run Locally
+
+1. Clone this repository:
+
+    ```bash
+    git clone  https://github.com/alexwalkergd/weather-app.git
+    ```
+
+2. Access the project folder:
+
+    ```bash
+    cd weather-app
+    ```
+
+3. Open the `index.html` file directly in your browser  
+   *(or use a VS Code extension like “Live Server” to run it locally)*
+
+4. Add your **OpenWeatherMap API Key** inside your JavaScript file:
+
+    ```javascript
+    const apiKey = "YOUR_API_KEY_HERE";
+    ```
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Alex Walker**
+
+💼 [GitHub](https://github.com/AlexWalkerGD)  
+📧 alexwalkerson@hotmail.com
+
+---
+
+## 🪪 License
+
+This project is licensed under the **MIT License**.  
+Feel free to use, modify, and distribute it as you wish.
