@@ -3,7 +3,7 @@ import styles from "./weather.module.css";
 import { FaSearch } from "react-icons/fa";
 
 const Weather = () => {
-  const inputRef = useRef();
+  const [query, setQuery] = useState("");
   const [WeatherData, setWeatherData] = useState(false);
 
   const search = async (city) => {
@@ -33,8 +33,13 @@ const Weather = () => {
   return (
     <div className={styles.container}>
       <div className={styles.searchbar}>
-        <input ref={inputRef} type="text" placeholder="Search" />
-        <button onClick={() => search(inputRef.current.value)}>
+        <input
+          value={query}
+          type="text"
+          placeholder="Search"
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button onClick={() => search(query)}>
           <FaSearch />
         </button>
       </div>
@@ -47,14 +52,14 @@ const Weather = () => {
       <p className={styles.location}>{WeatherData.location}</p>
       <div className={styles.othersdata}>
         <div className={styles.details}>
-          <img src="/humidity.png" alt="" />
+          <img src="humidity.png" alt="" />
           <div>
             <p>{WeatherData.humidity} %</p>
             <span>Humidity</span>
           </div>
         </div>
         <div className={styles.details}>
-          <img src="/wind.png" alt="" />
+          <img src="wind.png" alt="" />
           <div>
             <p>{WeatherData.windSpeed} Km/h</p>
             <span>Wind Speed</span>
